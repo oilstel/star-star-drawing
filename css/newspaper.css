@@ -1,0 +1,689 @@
+/* Newspaper */
+
+/*
+
+// START -- THEME INFO //
+
+Coming soon...
+
+<!--
+
+<p>Add a <code>css_class:</code> variable to a block's description to control layout.</p>
+
+<table>
+  <thead>
+    <tr><th>Variable</th><th>What does it do</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>css_class: full</code></td><td>Spans the full width, breaking out of columns</td></tr>
+  </tbody>
+</table>
+
+-->
+
+// END -- THEME INFO //
+
+*/
+
+:root {
+    /* START -- EDITABLE IN PANEL */
+    --color-text: #1a1a1a;
+    --color-link: #001a90;
+    --color-accent: #000;
+    --color-background: #f5f3eb;
+    --color-rule: #b2b1ab;
+    /* END -- EDITABLE IN PANEL */
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    line-height: 1.55;
+    color: var(--color-text);
+    background: var(--color-background);
+    margin: 0 auto;
+    padding: 2rem 2rem;
+    /* max-width: 1200px; */
+    max-width: initial;
+}
+
+a {
+    color: var(--color-link);
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header — masthead */
+
+.site-header {
+    text-align: center;
+    border-bottom: 1px solid var(--color-rule);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.site-title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.8rem;
+    font-weight: normal;
+    line-height: 1.1;
+    margin-top: 0;
+}
+
+.site-title a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.site-title a:hover {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.site-description {
+    margin-top: 0.6rem;
+    font-size: 0.95rem;
+    color: var(--color-accent);
+    line-height: 1.5;
+}
+
+.site-description p {
+    margin: 0.2em 0;
+}
+
+.site-description a {
+    color: var(--color-accent);
+}
+
+.site-meta {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    justify-content: center;
+}
+
+.site-collaborators a {
+    color: var(--color-link);
+}
+
+.site-rss {
+    color: var(--color-accent);
+}
+
+.site-meta-sep {
+    color: var(--color-rule);
+}
+
+/* Nav */
+
+.site-nav {
+    border-bottom: 1px solid var(--color-rule);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.site-nav ul {
+    justify-content: center;
+    gap: 0.25rem 2rem;
+}
+
+.site-nav a {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.site-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Columns layout */
+
+.blocks {
+    column-count: auto;
+    column-width: 280px;
+    column-gap: 1.8rem;
+    column-rule: 1px solid var(--color-rule);
+}
+
+.block {
+    break-inside: avoid;
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--color-rule);
+}
+
+.block.full {
+    column-span: all;
+}
+
+/* Block title */
+
+.block-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 0.4rem;
+    margin-top: 0;
+}
+
+.block-title a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.block-title a:hover {
+    text-decoration: underline;
+}
+
+.block-detail-title {
+    font-family: Georgia, 'Times New Roman', Times, serif;;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.6rem;
+}
+
+/* Image */
+
+.block-image {
+    display: block;
+    max-width: none;
+    margin-right: 0;
+}
+
+.block-image .block-content {
+    border: none;
+    padding: 0;
+    background: none;
+}
+
+.block-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: none;
+}
+
+.block-image figcaption,
+.block-image .block-title {
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--color-accent);
+    padding: 0.4rem 0 0;
+    background: none;
+    border: none;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Text */
+
+.block-text {
+    font-size: 16px;
+    line-height: 1.55;
+}
+
+.block-text p {
+    margin-bottom: 0.8em;
+}
+
+.block-text p:last-child {
+    margin-bottom: 0;
+}
+
+.block-text h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 1em 0 0.4rem;
+    border: none;
+    padding: 0;
+}
+
+.block-text h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0.8em 0 0.3rem;
+}
+
+.block-text h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    font-style: italic;
+    margin: 0.6em 0 0.3rem;
+}
+
+.block-text ul, .block-text ol {
+    padding-left: 1.5em;
+    margin-bottom: 0.8em;
+}
+
+.block-text li {
+    margin-bottom: 0.2em;
+}
+
+.block-text a {
+    color: var(--color-link);
+}
+
+.block-text blockquote {
+    border-left: 3px solid var(--color-rule);
+    padding-left: 1em;
+    margin: 0.8em 0;
+    font-style: italic;
+    color: var(--color-accent);
+}
+
+.block-text pre {
+    background: rgba(0,0,0,0.04);
+    padding: 0.75rem;
+    overflow-x: auto;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin-bottom: 0.8em;
+    border: 1px solid var(--color-rule);
+}
+
+.block-text code {
+    background: rgba(0,0,0,0.04);
+    padding: 1px 4px;
+    font-size: 0.85em;
+}
+
+.block-text pre code {
+    background: none;
+    padding: 0;
+}
+
+.block-text hr {
+    border: 0;
+    border-top: 1px solid var(--color-rule);
+    margin: 1em 0;
+}
+
+.continue-reading {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--color-accent);
+}
+
+.continue-reading:hover {
+    color: var(--color-text);
+}
+
+/* Link */
+
+.block-link .block-content > a {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    text-decoration: none;
+    padding: 0;
+    border: none;
+    background: none;
+    color: inherit;
+    min-height: auto;
+}
+
+.block-link .link-preview {
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 1px solid var(--color-rule);
+}
+
+.block-link .link-title {
+    display: block;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: underline;
+    color: var(--color-link);
+}
+
+.block-link .link-url {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--color-accent);
+    margin-top: 2px;
+    word-break: break-all;
+}
+
+.block-link .link-provider {
+    display: block;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--color-accent);
+    margin-top: 2px;
+}
+
+/* Channel */
+
+.block-channel .block-content > a {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    color: var(--color-text);
+    aspect-ratio: auto;
+    border: none;
+    padding: 0;
+}
+
+.block-channel .block-content > a:hover .channel-title {
+    text-decoration: underline;
+}
+
+.block-channel .channel-preview {
+    width: 28px;
+    height: 28px;
+    max-width: 28px;
+    max-height: 28px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.block-channel .channel-title {
+    font-size: 1rem;
+    font-weight: 700;
+    position: static;
+    bottom: auto;
+    left: auto;
+}
+
+.block-channel .channel-title::after {
+    content: ' \2192';
+    color: var(--color-accent);
+    font-weight: normal;
+}
+
+/* Embed — video */
+
+.block-embed-video,
+.block-attachment-video {
+    border: none;
+    padding: 0;
+    background: none;
+    max-width: none;
+    margin-right: 0;
+}
+
+.block-embed-video video,
+.block-attachment-video video {
+    width: 100%;
+}
+
+/* Embed — audio */
+
+.block-embed-audio,
+.block-attachment-audio {
+    border: none;
+    padding: 0;
+    background: none;
+    max-width: none;
+    margin-right: 0;
+}
+
+/* Embed — iframe (YouTube, etc.) */
+
+.block-embed .embed-container {
+    max-width: none;
+}
+
+.block-embed .embed-container iframe {
+    aspect-ratio: 16/9;
+    width: 100%;
+}
+
+.block-embed .embed-title,
+.block-attachment .embed-title {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--color-accent);
+    margin-top: 0.4rem;
+}
+
+.block-embed-video .block-title,
+.block-embed-audio .block-title,
+.block-attachment-video .block-title,
+.block-attachment-audio .block-title {
+    font-size: 0.85rem;
+    font-weight: normal;
+    font-style: italic;
+    color: var(--color-accent);
+    border: none;
+    padding: 0;
+    margin: 0.3rem 0 0;
+    line-height: 1.4;
+}
+
+/* Attachment — file */
+
+.block-attachment {
+    border: 1px solid var(--color-rule);
+    padding: 0.75rem;
+    background: rgba(0,0,0,0.02);
+}
+
+.block-attachment a {
+    color: var(--color-link);
+}
+
+.block-attachment .attachment-preview {
+    margin-bottom: 0.5rem;
+}
+
+/* Block meta */
+
+.block-meta {
+    font-size: 0.75rem;
+    color: var(--color-accent);
+    margin-top: 0.5rem;
+    line-height: 1;
+}
+
+.block-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    line-height: 1;
+}
+
+.block-date {
+    color: var(--color-accent);
+}
+
+img.contributor-avatar {
+    display: inline-block;
+    width: 14px;
+    min-width: 14px;
+    height: 14px;
+    object-fit: cover;
+    vertical-align: middle;
+    margin-right: 0.25rem;
+}
+
+.block-contributor a {
+    color: var(--color-accent);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    line-height: 1;
+}
+
+.block-contributor a:hover {
+    text-decoration: underline;
+}
+
+.block-permalink {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.block-permalink:hover {
+    text-decoration: underline;
+}
+
+.block-description {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--color-accent);
+    margin-bottom: 0.4rem;
+}
+
+/* Block detail */
+
+.block-detail-back {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 0.85rem;
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.block-detail-back:hover {
+    text-decoration: underline;
+    color: var(--color-text);
+}
+
+.block-detail {
+    max-width: 680px;
+    margin: 2rem auto;
+}
+
+.block-detail .block {
+    margin: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.block-detail .block-meta-row {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-rule);
+}
+
+.block-detail .block-text {
+    font-size: 1.05rem;
+    line-height: 1.65;
+}
+
+.block-detail .block-text blockquote {
+    border-left: 3px solid var(--color-rule);
+    padding-left: 1em;
+    margin: 1em 0;
+    color: var(--color-accent);
+}
+
+.block-detail .block-text pre {
+    background: rgba(0,0,0,0.04);
+    padding: 12px;
+    overflow-x: auto;
+    margin: 1em 0;
+}
+
+.block-detail .block-text code {
+    background: rgba(0,0,0,0.04);
+    padding: 1px 4px;
+}
+
+.block-detail .block-text pre code {
+    background: none;
+    padding: 0;
+}
+
+.block-detail .block-text hr {
+    border: 0;
+    border-top: 1px solid var(--color-rule);
+    margin: 1.5em 0;
+}
+
+.block-detail .block-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--color-accent);
+    margin-top: 1rem;
+}
+
+.block-detail .block-image img {
+    aspect-ratio: auto;
+    object-fit: contain;
+}
+
+/* Pagination */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 2rem 0 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--color-rule);
+    font-size: 0.9rem;
+    clear: both;
+}
+
+.pagination a {
+    color: var(--color-link);
+    text-decoration: none;
+}
+
+.pagination a:hover {
+    text-decoration: underline;
+}
+
+.page-info {
+    color: var(--color-accent);
+    font-style: italic;
+}
+
+/* Starstar */
+
+.starstar-badge {
+    opacity: 0.3;
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+.starstar-badge:hover {
+    opacity: 0.6;
+}
+
+.starstar-badge img {
+    width: 80px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    body {
+        padding: 1.25rem;
+    }
+
+    .site-title {
+        font-size: 2rem;
+    }
+
+    .blocks {
+        column-count: 1;
+    }
+}
